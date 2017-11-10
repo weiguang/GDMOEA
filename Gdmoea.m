@@ -1,4 +1,4 @@
-%
+% Base
 % Copyright (c) 2015, Yarpiz (www.yarpiz.com)
 % All rights reserved. Please read the "license.txt" for license terms.
 %
@@ -10,26 +10,27 @@
 % 
 % Contact Info: sm.kalami@gmail.com, info@yarpiz.com
 %
+% Weiguang Chen
+% Contact Info: chen2621978@163.com
+%
 
 clc;
 clear;
 close all;
 
-%% Problem Definition
 
-CostFunction=@(x) DTLZ2_objfun_10obj(x);      % Cost Function % 解决的问题
-nVar= 15;             % Number of Decision Variables %自变量个数
-VarMin= 0;          % Lower Bound of Variables %自变量的下限
-VarMax= 1;          % Upper Bound of Variables %自变量的上限
+%% Problem Definition
+CostFunction=@(x) MOP4(x);      % Cost Function % 解决的问题
+nVar= 3;             % Number of Decision Variables %自变量个数
+VarMin= -5;          % Lower Bound of Variables %自变量的下限
+VarMax= 5;          % Upper Bound of Variables %自变量的上限
 
 VarSize=[1 nVar];   % Size of Decision Variables Matrix
 
 % Number of Objective Functions
 nObj=numel(CostFunction(unifrnd(VarMin,VarMax,VarSize)));
 
-
-%% NSGA-II Parameters
-
+%% Parameters
 MaxIt = 200;      % Maximum Number of Iterations
 
 nPop = 50;        % Population Size
@@ -54,8 +55,8 @@ Info.VarMax = VarMax;
 Info.nObj = nObj;
 Info.k = 4; %聚类数
 Info.nPop = nPop;
-%% Initialization
 
+%% Initialization
 empty_individual.Position=[];
 empty_individual.Cost=[];
 empty_individual.Rank=[];
@@ -90,9 +91,7 @@ end
 % % Sort Population
 % [pop, F]=SortPopulation(pop);
 
-
-%% NSGA-II Main Loop
-
+%% Main Loop
 for it=1:MaxIt
     
     % Crossover
@@ -188,10 +187,9 @@ for it=1:MaxIt
     
     % Plot F1 Costs
     figure(1);
-    %PlotCosts(F1);
+    PlotCosts(F1);
     pause(0.01);
     
 end
 
 %% Results
-

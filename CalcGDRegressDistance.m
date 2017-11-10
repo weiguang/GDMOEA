@@ -22,7 +22,7 @@ function [pop]=CalcGDRegressDistance(pop, Info)
     temp = 1;
     dis = 0;
     pop(1).GDistion = 0;
-    %每个聚类进行回归分析
+    %% 每个聚类进行回归分析
     for i = 1:k
         % %获取第i类种群
         pop_cluster =  pop(idx == i);
@@ -44,7 +44,7 @@ function [pop]=CalcGDRegressDistance(pop, Info)
         %记录已经处理到个体数+1
         %temp = temp + csize(1); 
     end
-%     %根据计算的世代距离排序 
+    %% 根据计算的世代距离排序 
 %     [~, GDSO]=sort([pop.GDistion]);
 %     pop=pop(GDSO)
 end
