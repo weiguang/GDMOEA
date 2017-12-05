@@ -1,7 +1,8 @@
 % Weiguang Chen
 % Contact Info: chen2621978@163.com
 %
-%
+% Fonseca and Fleming function
+
 
 clc;
 clear;

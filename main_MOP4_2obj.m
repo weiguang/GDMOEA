@@ -1,7 +1,7 @@
 % Weiguang Chen
 % Contact Info: chen2621978@163.com
 %
-%
+% Kursawe function
 
 clc;
 clear;
