@@ -11,6 +11,7 @@
 % Contact Info: sm.kalami@gmail.com, info@yarpiz.com
 %
 % Fonseca and Fleming function
+% 2 object ,var 1-n
 
 function z=MOP2(x)
 

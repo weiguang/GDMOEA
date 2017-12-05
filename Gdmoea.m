@@ -1,39 +1,26 @@
-% Base
-% Copyright (c) 2015, Yarpiz (www.yarpiz.com)
-% All rights reserved. Please read the "license.txt" for license terms.
-%
-% Project Code: YPEA120
-% Project Title: Non-dominated Sorting Genetic Algorithm II (NSGA-II)
-% Publisher: Yarpiz (www.yarpiz.com)
-% 
-% Developer: S. Mostapha Kalami Heris (Member of Yarpiz Team)
-% 
-% Contact Info: sm.kalami@gmail.com, info@yarpiz.com
 %
 % Weiguang Chen
 % Contact Info: chen2621978@163.com
 %
+%主程序，需要Info参数，包括问题定义，种群数量等信息
+%
 
-clc;
-clear;
-close all;
-
+function pop=Gdmpea(Info)
 
 %% Problem Definition
-CostFunction=@(x) MOP4(x);      % Cost Function % 解决的问题
-nVar= 3;             % Number of Decision Variables %自变量个数
-VarMin= -5;          % Lower Bound of Variables %自变量的下限
-VarMax= 5;          % Upper Bound of Variables %自变量的上限
+CostFunction=Info.CostFunction;      % Cost Function % 解决的问题
+nVar= Info.nVar;             % Number of Decision Variables %自变量个数
+VarMin= Info.VarMin;          % Lower Bound of Variables %自变量的下限
+VarMax= Info.VarMax;          % Upper Bound of Variables %自变量的上限
 
 VarSize=[1 nVar];   % Size of Decision Variables Matrix
 
-% Number of Objective Functions
-nObj=numel(CostFunction(unifrnd(VarMin,VarMax,VarSize)));
+nObj = Info.nObj;   % Number of Objective Functions
 
 %% Parameters
-MaxIt = 200;      % Maximum Number of Iterations
+MaxIt = Info.MaxIt;      % Maximum Number of Iterations
 
-nPop = 50;        % Population Size
+nPop = Info.nPop;        % Population Size
 
 pCrossover = 0.7;                         % Crossover Percentage
 nCrossover = 2*round(pCrossover*nPop/2);  % Number of Parnets (Offsprings)
@@ -48,13 +35,6 @@ sigma = 0.1*(VarMax-VarMin);  % Mutation Step Size
 rou = 1;
 rouMax = 1;
 rouMin = 0.1;
-
-Info.nVar = nVar;
-Info.VarMin = VarMin;
-Info.VarMax = VarMax;
-Info.nObj = nObj;
-Info.k = 4; %聚类数
-Info.nPop = nPop;
 
 %% Initialization
 empty_individual.Position=[];
@@ -185,11 +165,12 @@ for it=1:MaxIt
     % Show Iteration Information
     disp(['Iteration ' num2str(it) ': Number of F1 Members = ' num2str(numel(F1))]);
     
-    % Plot F1 Costs
-    figure(1);
-    PlotCosts(F1);
-    pause(0.01);
-    
+    if nObj == 2
+        % Plot F1 Costs
+        figure(1);
+        PlotCosts(F1);
+        pause(0.01);
+    end  
 end
 
 %% Results

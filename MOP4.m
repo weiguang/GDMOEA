@@ -11,6 +11,7 @@
 % Contact Info: sm.kalami@gmail.com, info@yarpiz.com
 %
 % Kursawe function
+% 2 object, var 1-3
 
 function z=MOP4(x)
 
