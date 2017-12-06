@@ -11,4 +11,18 @@
 % Contact Info: sm.kalami@gmail.com, info@yarpiz.com
 %
 
-nsga2;
+%nsga2;
+
+%% include paths
+% 添加当前路径下的所有子目录
+%addpath(genpath(pwd));
+
+addpath(pwd);
+addpath([pwd '\problem']);
+
+%% problem
+main_MOP2_2obj
+
+% main_MOP4_2obj
+
+% main_DLTZ2_10obj

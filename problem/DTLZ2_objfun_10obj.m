@@ -4,7 +4,7 @@ function [y] = DTLZ2_objfun_10obj(x)
 % Minimize
  
  
-y = zeros(1,10);
+y = zeros(10,1);
 cons = [];
  
 g = sum((x(10:end)-0.5).^2);
