@@ -10,6 +10,7 @@
 % 
 % Contact Info: sm.kalami@gmail.com, info@yarpiz.com
 %
+%Minimize
 
 function z=ZDT(x)
 
