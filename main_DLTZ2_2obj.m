@@ -1,6 +1,5 @@
-% Weiguang Chen
-% Contact Info: chen2621978@163.com
-%
+% Developer: Weiguang Chen
+% Contact Info: chen2621978@gmail.com
 %
 
 clc;
@@ -8,8 +7,8 @@ clear;
 close all;
 
 %% Problem Definition
-CostFunction=@(x) ZDT(x);      % Cost Function % 解决的问题
-nVar= 3;             % Number of Decision Variables %自变量个数,n=(M-1)+k
+CostFunction=@(x) DTLZ2_objfun_2obj(x);      % Cost Function % 解决的问题
+nVar= 11;             % Number of Decision Variables %自变量个数,n=(M-1)+k
 VarMin= 0;          % Lower Bound of Variables %自变量的下限
 VarMax= 1;          % Upper Bound of Variables %自变量的上限
 VarSize=[1 nVar];   % Size of Decision Variables Matrix
@@ -19,7 +18,7 @@ nObj=numel(CostFunction(unifrnd(VarMin,VarMax,VarSize)));
 %% Parameters Setting
 
 MaxIt = 200;      % Maximum Number of Iterations
-nPop = 100;        % Population Size
+nPop = 50;        % Population Size
 
 Info.CostFunction = CostFunction;   % Cost Function % 解决的问题
 Info.nVar = nVar;                    % Number of Decision Variables %自变量个数,维度
