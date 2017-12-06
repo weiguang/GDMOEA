@@ -9,7 +9,7 @@ clear;
 close all;
 
 %% Problem Definition
-CostFunction=@(x) MOP4(x);      % Cost Function % 解决的问题
+CostFunction=@(x) Kursawe(x);      % Cost Function % 解决的问题
 nVar= 3;             % Number of Decision Variables %自变量个数,1-3
 VarMin= -5;          % Lower Bound of Variables %自变量的下限
 VarMax= 5;          % Upper Bound of Variables %自变量的上限

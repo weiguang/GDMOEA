@@ -10,7 +10,7 @@ clear;
 close all;
 
 %% Problem Definition
-CostFunction=@(x) MOP2(x);      % Cost Function % 解决的问题
+CostFunction=@(x) Fonseca(x);      % Cost Function % 解决的问题
 nVar= 3;             % Number of Decision Variables %自变量个数,1-n
 VarMin= -4;          % Lower Bound of Variables %自变量的下限
 VarMax= 4;          % Upper Bound of Variables %自变量的上限
