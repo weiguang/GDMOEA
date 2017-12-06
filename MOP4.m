@@ -12,6 +12,7 @@
 %
 % Kursawe function
 % 2 object, var 1-3
+% Minimize
 
 function z=MOP4(x)
 

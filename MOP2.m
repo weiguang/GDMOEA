@@ -12,6 +12,7 @@
 %
 % Fonseca and Fleming function
 % 2 object ,var 1-n
+% Minimize
 
 function z=MOP2(x)
 

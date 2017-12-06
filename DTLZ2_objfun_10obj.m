@@ -1,6 +1,7 @@
 function [y] = DTLZ2_objfun_10obj(x)
 % Objective function : Test problem 'DTLZ2'.
 %*************************************************************************
+% Minimize
  
  
 y = zeros(1,10);

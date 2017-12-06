@@ -2,6 +2,7 @@
 % Contact Info: chen2621978@163.com
 %
 % Fonseca and Fleming function
+% Minimize
 
 
 clc;
