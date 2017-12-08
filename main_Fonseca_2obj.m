@@ -34,3 +34,6 @@ Info.MaxIt = MaxIt;                  % Maximum Number of Iterations %µü´ú´ÎÊý
 
 %% Gdmoea
 Gdmoea(Info);
+hold on;
+FonsecaPF = load('Fonseca2.pf');
+plotPF(FonsecaPF);

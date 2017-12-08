@@ -20,7 +20,7 @@ nObj=numel(CostFunction(unifrnd(VarMin,VarMax,VarSize)));
 
 %% Parameters Setting
 
-MaxIt = 200;      % Maximum Number of Iterations
+MaxIt = 100;      % Maximum Number of Iterations
 nPop = 100;        % Population Size
 
 Info.CostFunction = CostFunction;   % Cost Function % 解决的问题
@@ -34,3 +34,6 @@ Info.MaxIt = MaxIt;                  % Maximum Number of Iterations %迭代次数
 
 %% Gdmoea
 Gdmoea(Info);
+hold on;
+KursawePF = load('Kursawe.pf')
+plotPF(KursawePF);
