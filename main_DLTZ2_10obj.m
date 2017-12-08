@@ -8,7 +8,7 @@ close all;
 
 %% Problem Definition
 CostFunction=@(x) DTLZ2_objfun_10obj(x);      % Cost Function % 解决的问题
-nVar= 19;             % Number of Decision Variables %自变量个数,n=(M-1)+10
+nVar= 10+9;             % Number of Decision Variables %自变量个数,n=(M-1)+10
 VarMin= 0;          % Lower Bound of Variables %自变量的下限
 VarMax= 1;          % Upper Bound of Variables %自变量的上限
 VarSize=[1 nVar];   % Size of Decision Variables Matrix

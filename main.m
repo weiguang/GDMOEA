@@ -9,6 +9,9 @@
 addpath(pwd);
 addpath([pwd '\problem']);
 addpath([pwd '\gdmoea']);
+addpath([pwd '\indicator']);
+addpath([pwd '\pf']);
+addpath([pwd '\plot']);
 
 %% clean all
 clc;
