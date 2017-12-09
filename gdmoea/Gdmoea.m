@@ -170,7 +170,12 @@ for it=1:MaxIt
         figure(1);
         PlotCosts(F1);
         pause(0.01);
-    end  
+    end
 end
 
+%% Analysis
+    Analysis(pop, Info);
+
 %% Results
+
+end

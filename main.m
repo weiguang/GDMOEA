@@ -19,8 +19,8 @@ clear;
 close all;
 
 %% problem
-% main_DLTZ2_2obj
-% main_DLTZ2_10obj
-% main_Fonseca_2obj
-% main_Kursawe_2obj
-% main_ZDT_2obj
+% main_DLTZ2_2D
+% main_DLTZ2_8D
+% main_Fonseca_2D
+% main_Kursawe_2D
+% main_ZDT_2D

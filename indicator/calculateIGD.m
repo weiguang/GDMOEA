@@ -1,5 +1,5 @@
 
-function  IGD = calculateIGD(PF,fit);
+function  IGD = CalculateIGD(PF,fit);
 % calculate IGD metric 
 % fit: popSize*M  
 % PF: pfSize*M  

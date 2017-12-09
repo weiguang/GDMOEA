@@ -1,4 +1,4 @@
-function GD = calculateGD(PF,fit)
+function GD = CalculateGD(PF,fit)
 % calculate GD metric 
 % fit: popSize*M     
 % PF: pfSize*M
