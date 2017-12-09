@@ -1,4 +1,4 @@
-function plotPF(PF)
+function PlotPF(PF)
 % plot 2D or 3D PF
 %
     varSize = size(PF,2);

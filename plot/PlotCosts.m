@@ -14,7 +14,7 @@
 function PlotCosts(pop)
 
     Costs=[pop.Cost];
-    m = size(Costs,1)
+    m = size(Costs,1);
     if m <= 3
 
         grid on;
@@ -28,6 +28,6 @@ function PlotCosts(pop)
         ylabel('2^{nd} Objective');
         title('Non-dominated Solutions (F_{1})');
     else
-        disp('Object more than 3!')
+        disp('Object more than 3!');
     end 
 end
