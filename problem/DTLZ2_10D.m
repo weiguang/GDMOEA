@@ -1,4 +1,4 @@
-function [y] = DTLZ2_objfun_10obj(x)
+function [y] = DTLZ2_10D(x)
 % Objective function : Test problem 'DTLZ2'.
 %*************************************************************************
 % Minimize
