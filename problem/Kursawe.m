@@ -14,7 +14,7 @@
 % 2 object, var 1-3
 % Minimize
 
-function z=MOP4(x)
+function z=Kursawe(x)
 
     a=0.8;
     

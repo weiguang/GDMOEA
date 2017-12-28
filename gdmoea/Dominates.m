@@ -23,5 +23,6 @@ function b=Dominates(x,y)
     end
 
     b=all(x<=y) && any(x<y);
+%     b = sum(x<y) > size(x,1)/2;
 
 end

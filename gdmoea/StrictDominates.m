@@ -10,18 +10,19 @@
 % 
 % Contact Info: sm.kalami@gmail.com, info@yarpiz.com
 %
-% Fonseca and Fleming function
-% 2 object ,var 1-n
 % Minimize
 
-function z=Fonseca(x)
+function b=Dominates(x,y)
 
-    n=numel(x);
-    
-    z1=1-exp(-sum((x-1/sqrt(n)).^2));
-    
-    z2=1-exp(-sum((x+1/sqrt(n)).^2));
-    
-    z=[z1 z2]';
+    if isstruct(x)
+        x=x.Cost;
+    end
+
+    if isstruct(y)
+        y=y.Cost;
+    end
+
+%     b=all(x<=y) && any(x<y);
+    b = sum(x<y) > size(x,1)/2
 
 end

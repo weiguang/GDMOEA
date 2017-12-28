@@ -13,6 +13,7 @@
 
 function [pop, F]=SortPopulation(pop,stype,varargin)
     %disp(['nargin is ' num2str(nargin)]);
+    stype = 0;
     if stype == 1
         %根据计算的世代距离排序 
         [~, GDSO]=sort([pop.FSorting],'descend');
