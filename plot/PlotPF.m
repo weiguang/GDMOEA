@@ -13,7 +13,7 @@ function PlotPF(PF)
         end
         xlabel('1^{st} Objective');
         ylabel('2^{nd} Objective');
-        title('Non-dominated Solutions (F_{1})');
+%         title('Non-dominated Solutions (F_{1})');
     else
         disp('Object size more than 3!')     
     end  
