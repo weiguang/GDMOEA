@@ -3,9 +3,11 @@ function Indicator = Analysis(Pop,Info)
     PF = load(Info.PF);
     Costs=[Pop.Cost];
 %% draw PF
+if(Info.nObj<=3)
     hold on;
     PlotPF(PF);
     hold off;
+end
    
 %% calculate GD
    GD = CalculateGD(PF,Costs');

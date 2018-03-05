@@ -17,7 +17,7 @@ nObj=numel(CostFunction(unifrnd(VarMin,VarMax,VarSize)));
 
 %% Parameters Setting
 
-MaxIt = 200;      % Maximum Number of Iterations
+MaxIt = 200;      % Maximum Num ber of Iterations
 nPop = 50;        % Population Size
 
 Info.CostFunction = CostFunction;   % Cost Function % 解决的问题

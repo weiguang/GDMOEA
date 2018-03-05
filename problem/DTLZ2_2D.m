@@ -1,4 +1,4 @@
-function [y] = DTLZ2_2D(x)
+function [y] = DTLZ2_2D(x,varargin)
 % Objective function : Test problem 'DTLZ2'.
 %*************************************************************************
 % Minimize

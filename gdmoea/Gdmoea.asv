@@ -55,11 +55,7 @@ for i=1:nPop
     
     pop(i).Position=unifrnd(VarMin,VarMax,VarSize);
     
-             temp =pop(i).Position;
-        if(Info.varType == 1)
-             temp = pop(i).Position';
-        end
-    pop(i).Cost=feval(CostFunction,temp, nObj);
+    pop(i).Cost=feval(CostFunction,pop(i).Position, nObj);
     
 end
 
@@ -90,14 +86,14 @@ for it=1:MaxIt
         
         [popc(k,1).Position, popc(k,2).Position]=Crossover(p1.Position,p2.Position);
         
-         temp1 = popc(k,1).Position;
-         temp2 = popc(k,2).Position;
+         temp1 = popc(k,1).Position';
+             temp2 = popc(k,2).Position';
         if(Info.varType == 1)
              temp1 = popc(k,1).Position';
              temp2 = popc(k,2).Position';
         end
-        popc(k,1).Cost=feval(CostFunction, temp1, nObj);
-        popc(k,2).Cost=feval(CostFunction, temp2, nObj);
+        popc(k,1).Cost=feval(CostFunction, , nObj);
+        popc(k,2).Cost=feval(CostFunction, popc(k,2).Position, nObj);
         
     end
     popc=popc(:);
@@ -111,13 +107,7 @@ for it=1:MaxIt
         
         popm(k).Position=Mutate(p.Position,mu,sigma);
         
-
-         temp = popm(k).Position;
-        if(Info.varType == 1)
-             temp = popm(k).Position';
-        end
-        
-        popm(k).Cost=feval(CostFunction,temp, nObj);
+        popm(k).Cost=feval(CostFunction, popm(k).Position, nObj);
         
     end
     
