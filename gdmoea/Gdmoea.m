@@ -133,7 +133,7 @@ for it=1:MaxIt
      % Calculate Crowding Distance
      pop=CalcCrowdingDistance(pop,F);
 
-    if (length(F) > 3) && (length(F{1}) < nPop * 0.9 )
+    if (length(F) > 2) && (length(F{1}) < nPop * 0.9 )
 
         % Sort Population
         pop=SortPopulation(pop, 0);

@@ -47,7 +47,7 @@ end
     Info.CostFunction = fname;
     PF = sprintf("%s.%dD.pf",upper(fname),M)
     Info.PF = PF;             % Real pareto front %真实的PF
-    Info.nPop = 100;                   % Population Size %种群数量
+    Info.nPop = 200;                   % Population Size %种群数量
     Info.MaxIt = 200;                  % Maximum Number of Iterations %迭代次数
     Info.k = cluster;                         %cluster %聚类数
     Info.nVar = (M - 1) + k;                    % Number of Decision Variables %自变量个数,维度

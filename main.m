@@ -7,7 +7,7 @@
 %addpath(genpath(pwd));
 
 addpath(pwd);
-addpath([pwd '\problem']);
+addpath(genpath([pwd '\problem']));
 addpath([pwd '\gdmoea']);
 addpath([pwd '\indicator']);
 addpath([pwd '\pf']);
@@ -19,6 +19,7 @@ clear;
 close all;
 
 %% problem
+% main_dtlz
 % main_DLTZ2_2D
 % main_DLTZ2_8D
 % main_Fonseca_2D
